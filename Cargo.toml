@@ -1,0 +1,25 @@
+[package]
+name = "java-detector"
+version = "0.1.0"
+license = "Apache-2.0"
+authors = ["Waritnan Sookbuntherng <lion328@hotmail.co.th>"]
+
+[lib]
+name = "java_detector"
+path = "lib.rs"
+
+[dependencies]
+regex = "0.2"
+which = "1.0.3"
+lazy_static = "0.2.9"
+error-chain = "0.11.0"
+goblin = "0.0.11"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.4.0"
+winapi = "0.2.8"
+kernel32-sys = "0.2.2"
+
+[target.'cfg(unix)'.dependencies]
+nix = "0.9.0"
+
